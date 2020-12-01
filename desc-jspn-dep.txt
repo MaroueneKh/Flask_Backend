@@ -1,0 +1,58 @@
+Interface "Mes Dépenses"
+
+1)Description (nom mobile => champs json):
+
+-tier => "acteur"."fullName"
+-n° facture => "factureCode"
+-designation =>  "designation"
+-tva => "montantTVA"
+-total ttc => "mttotal"
+ 
+2)Exemple: 
+
+JSON En input:
+ {
+        "id": 0,
+        "code": "DEP0001",
+        "acteur": {
+            "id": 0,
+            "code": "ACT123",
+            "etat": "ACTIF",
+            "memo": "TEST WS ACTEUR",
+            "role": "Fournisseur",
+            "libcheque": "TEST WS ACTEUR",
+            "dtcreat": 1606064476041,
+            "dtmaj": 1606064476041,
+            "fullName": "TEST WS ACTEUR",
+            "actadresses": null,
+            "actTelecoms": null,
+            "infoFinanciere": null,
+            "infoFacturation": null,
+            "matfisc": null,
+            "nom": null,
+            "prenom": null,
+            "catjuridique": null,
+            "groupHierarchie": null,
+            "groupe": null,
+            "employees": [],
+            "name": null,
+            "identifier": null
+        },
+        "mttotal": 10.5,
+        "designation": "Achat materiel xyz",
+        "etatpaiement": "NP",
+        "dtpaiement": 1606064476041,
+        "factureCode": "F0001",
+        "dateFacture": 1606064476041,
+        "montantHT": 10.5,
+        "montantTVA": 0.5,
+        "comission": 0.0,
+        "droitTimbre": 0.6
+    },
+Extraction mobile:
+
+-tier = TEST WS ACTEUR
+-n° facture = F0001
+-designation =  Achat materiel xyz
+-tva = 0.5
+-total ttc = 10.5
